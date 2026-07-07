@@ -31,6 +31,26 @@ set -uo pipefail
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_DIR"
 
+# macOS ships no `timeout` binary. Shim it: prefer coreutils' gtimeout, else a
+# perl fallback that mirrors GNU semantics (exit 124 on timeout).
+if ! command -v timeout >/dev/null 2>&1; then
+  if command -v gtimeout >/dev/null 2>&1; then
+    timeout() { gtimeout "$@"; }
+  else
+    timeout() {
+      perl -e '
+        my $t = shift @ARGV;
+        my $pid = fork // exit 125;
+        if ($pid == 0) { exec @ARGV or exit 127 }
+        $SIG{ALRM} = sub { kill "TERM", $pid; waitpid $pid, 0; exit 124 };
+        alarm $t;
+        waitpid $pid, 0;
+        exit(($? >> 8) || ($? & 127 ? 128 + ($? & 127) : 0));
+      ' "$@"
+    }
+  fi
+fi
+
 QUICK=0
 AGENTS_ONLY=0
 for arg in "$@"; do
