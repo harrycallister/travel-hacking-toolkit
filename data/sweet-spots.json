@@ -1,9 +1,9 @@
 {
   "_meta": {
     "description": "Award flight and hotel sweet spots. High-value redemptions where points deliver outsized value compared to cash prices. Verified against current award charts as of last_updated.",
-    "last_updated": "2026-03-21",
+    "last_updated": "2026-07-07",
     "staleness_days": 60,
-    "notes": "Turkish Miles&Smiles devalued Feb 15, 2025 (connections now priced separately). Emirates new partner chart March 4, 2026 (rates dropped up to 76%). Sweet spots change with program devaluations. Re-verify chart rates before recommending."
+    "notes": "Web-verified 2026-07-07. Recent devaluations: Avianca LifeMiles raised partner rates ~20% May 2026 (third hike since Aug 2024). Aeroplan partner chart increases effective June 1, 2026. Hyatt moved to 5-tier award pricing (Lowest/Low/Moderate/Upper/Top) May 20, 2026. Korean Air SKYPASS lost its last transferable-currency partner (Marriott ended 2024). Turkish Miles&Smiles devalued Feb 15, 2025 (connections now priced separately). Emirates new partner chart March 4, 2026 (rates dropped up to 76%). Sweet spots change with program devaluations. Re-verify chart rates before recommending."
   },
 
   "booking_windows": {
@@ -78,17 +78,18 @@
     },
     {
       "name": "ANA Business via Avianca LifeMiles",
-      "tier": "excellent",
+      "tier": "good",
       "program": "Avianca LifeMiles",
       "airline": "ANA",
       "alliance": "star_alliance",
       "cabin": "business",
       "routes": {
-        "us_to_japan": {"miles": 88000, "direction": "round-trip"},
-        "japan_to_australia": {"miles": 72000, "direction": "round-trip"}
+        "us_to_japan": {"miles": 88000, "direction": "round-trip", "note": "pre-May-2026 rate; expect ~20% higher after the May 2026 devaluation, verify live at lifemiles.com"},
+        "japan_to_australia": {"miles": 72000, "direction": "round-trip", "note": "pre-May-2026 rate; verify live"}
       },
       "surcharges": "low",
-      "why": "LifeMiles often prices Star Alliance awards cheaper than United or Aeroplan. 36K one-way ANA J vs 45K on Aeroplan. Miles are also regularly available for purchase on sale at ~1.3cpp.",
+      "devaluation_date": "2026-05",
+      "why": "LifeMiles historically priced Star Alliance awards cheaper than United or Aeroplan, but it devalued partner awards ~20% in May 2026 (third hike since Aug 2024, e.g. US-Europe partner business now up to ~92K one-way on United). No published chart, so price out the exact itinerary before transferring. Miles are still regularly available for purchase on sale at ~1.3cpp.",
       "transfer_partners": ["Amex MR", "Bilt", "Capital One", "Citi TY", "Marriott Bonvoy"],
       "booking": {
         "search_availability": "lifemiles.com or united.com",
@@ -126,7 +127,8 @@
       "alliance": "oneworld",
       "cabin": "business",
       "routes": {
-        "us_to_qatar_saver": {"miles": 70000, "direction": "one-way"},
+        "us_to_qatar_saver_offpeak": {"miles": 70000, "direction": "one-way"},
+        "us_to_qatar_saver_peak": {"miles": 94500, "direction": "one-way"},
         "us_to_qatar_flexible": {"miles": 140000, "direction": "one-way"}
       },
       "surcharges": "low",
@@ -194,8 +196,9 @@
         "us_to_europe_roundtrip_business": {"miles": 80000, "direction": "round-trip"},
         "us_to_europe_roundtrip_economy": {"miles": 50000, "direction": "round-trip"}
       },
-      "why": "One of the few programs still offering fixed round-trip awards at these rates. 80K round-trip in business is excellent. Allows a stopover AND open jaw, which can turn one trip into two destinations.",
-      "transfer_partners": ["Chase UR", "Citi TY"],
+      "why": "One of the few programs still offering fixed round-trip awards at these rates. 80K round-trip in business is excellent. Allows a stopover AND open jaw, which can turn one trip into two destinations. Chart verified stable in 2026, but peak pricing now covers ~40% of the calendar.",
+      "transfer_partners": [],
+      "access_warning": "SKYPASS has NO transferable-currency partners. Chase UR dropped Korean Air in 2018 and the Marriott Bonvoy transfer path ended in 2024. Miles come only from flying (Korean Air/SkyTeam) or the US Bank SKYPASS co-brand cards. Skip this option unless the user already holds SKYPASS miles.",
       "booking": {
         "search_availability": "koreanair.com",
         "book_via": "Call 1-800-438-5000",
@@ -236,7 +239,7 @@
         "us_to_europe_economy": {"miles": 25000, "direction": "one-way"}
       },
       "surcharges": "moderate",
-      "why": "Flying Blue runs monthly promo awards with discounted mileage rates. The real gem: FREE stopovers on one-way awards, even on partner airlines. No other program does this.",
+      "why": "Flying Blue runs monthly Promo Rewards at ~25% off (e.g. July 2026: US-Europe from 45K business / 18.75K economy one-way). The real gem: FREE stopovers on one-way awards, even on partner airlines. No other program does this. Base rates reflect the ~20% January 2025 devaluation; pricing is dynamic, so weekends can spike far above the 60K starting rate.",
       "transfer_partners": ["Amex MR", "Bilt", "Capital One", "Chase UR", "Citi TY"],
       "booking": {
         "search_availability": "airfrance.com or klm.com",
@@ -253,10 +256,11 @@
       "alliance": "star_alliance",
       "cabin": "business",
       "routes": {
-        "us_northeast_to_europe": {"miles": 60000, "direction": "one-way", "note": "starting rate, dynamic pricing applies"},
-        "us_to_europe": {"miles": 70000, "direction": "one-way", "note": "typical rate"}
+        "us_northeast_to_europe": {"miles": 60000, "direction": "one-way", "note": "0-4,000 mile band, unchanged in the June 2026 chart"},
+        "us_to_europe": {"miles": 75000, "direction": "one-way", "note": "4,001-6,000 mile band; was 70K, increased 2026-06-01"}
       },
-      "why": "Aeroplan has the widest Star Alliance partner availability. Can book Lufthansa First for 90-100K from East Coast. Also great for mixed-partner itineraries. Low-cost short hauls (United under 500 miles for 6K).",
+      "devaluation_date": "2026-06-01",
+      "why": "Aeroplan has the widest Star Alliance partner availability. Also great for mixed-partner itineraries. Low-cost short hauls (United under 500 miles for 6K). Partner chart rates increased June 1, 2026 — long-haul premium cabins hit hardest (Atlantic-Pacific 7,001+ mile business jumped 60K to 100K). A $39 CAD partner booking fee applies to any award including a partner flight.",
       "transfer_partners": ["Amex MR", "Bilt", "Capital One", "Chase UR", "Citi TY"],
       "booking": {
         "search_availability": "aircanada.com/aeroplan",
@@ -275,8 +279,8 @@
       "routes": {
         "us_to_europe_via_dxb": {"miles": 72500, "direction": "one-way"}
       },
-      "why": "The Emirates A380 business class experience. Onboard bar, lie-flat seats, shower in First. Good value when saver space is available. Transfer from multiple programs.",
-      "transfer_partners": ["Amex MR", "Capital One", "Citi TY", "Marriott Bonvoy"],
+      "why": "The Emirates A380 business class experience. Onboard bar, lie-flat seats, shower in First. Good value when saver space is available. Transfer from multiple programs (only Bilt is 1:1; Amex/Citi/Capital One all transfer at a loss).",
+      "transfer_partners": ["Amex MR (1:0.8)", "Bilt (1:1)", "Capital One (4:3)", "Citi TY (5:4)", "Marriott Bonvoy"],
       "booking": {
         "search_availability": "emirates.com",
         "book_via": "emirates.com",
@@ -312,21 +316,22 @@
       "name": "Hyatt Category 1-4 Properties",
       "tier": "excellent",
       "program": "World of Hyatt",
-      "cost_range": "5,000-15,000 points/night",
-      "why": "Hyatt consistently delivers the best hotel points value. Category 1-4 properties cost 5-15K points/night and routinely deliver 1.5-2.5cpp. No resort fees on award stays. Many all-inclusive resorts in the portfolio.",
+      "cost_range": "3,000-25,000 points/night (5-tier chart effective 2026-05-20)",
+      "why": "Hyatt consistently delivers the best hotel points value, though the May 20, 2026 award chart expanded each category from 3 to 5 pricing tiers (Lowest/Low/Moderate/Upper/Top): Lowest-tier nights dropped 8-14% but busy dates rose 33-67% (Cat 1 top now 9K, Cat 4 top now 25K). Off-peak Category 1-4 stays still routinely deliver 1.5-2.5cpp. No resort fees on award stays.",
+      "chart_change_date": "2026-05-20",
       "transfer_partners": ["Chase UR (1:1)", "Bilt (1:1)"],
       "booking": {
         "search_at": "hyatt.com",
         "book_via": "hyatt.com or Hyatt app",
-        "tips": ["Chase UR to Hyatt 1:1 is one of the best transfer values in the game", "Category changes announced in advance, book before increases", "All-inclusive Ziva/Zilara resorts are exceptional value on points", "Peak/off-peak pricing can save 20% on award stays"]
+        "tips": ["Chase UR to Hyatt 1:1 is one of the best transfer values in the game", "Category changes announced in advance, book before increases (136 properties shifted May 2026)", "All-inclusive Ziva/Zilara resorts are exceptional value on points", "Target Lowest/Low tier dates — the gap between Lowest and Top pricing is much wider than the old off-peak/peak spread"]
       }
     },
     {
       "name": "Hyatt All-Inclusive (Ziva/Zilara)",
       "tier": "legendary",
       "program": "World of Hyatt",
-      "cost_range": "20,000-35,000 points/night",
-      "why": "All-inclusive resorts where points cover EVERYTHING: room, food, drinks, activities. Cash rates are often $500-$800+/night. At 25K points, that's 2.0-3.2cpp. The best absolute value play in hotel points.",
+      "cost_range": "15,000-25,000 points/night typical for Ziva/Zilara standard rooms; full A-F all-inclusive chart spans 12,000-85,000 (as of May 2026 chart)",
+      "why": "All-inclusive resorts where points cover EVERYTHING: room, food, drinks, activities. Cash rates are often $500-$800+/night. At 25K points, that's 2.0-3.2cpp. The best absolute value play in hotel points. All-inclusives use a letter-based category system (A-F) with the same 5 pricing tiers introduced May 20, 2026.",
       "transfer_partners": ["Chase UR (1:1)", "Bilt (1:1)"],
       "locations": ["Cancun", "Los Cabos", "Montego Bay", "Punta Cana", "Cap Cana", "Puerto Vallarta", "Turks & Caicos"],
       "booking": {
@@ -335,11 +340,11 @@
       }
     },
     {
-      "name": "IHG PointBreaks / Low-Category",
+      "name": "IHG Low-Category Properties",
       "tier": "good",
       "program": "IHG One Rewards",
-      "cost_range": "5,000-15,000 points/night (PointBreaks even lower)",
-      "why": "IHG runs periodic PointBreaks promotions with hotels for as low as 5,000 points/night. Even regular low-category hotels are cheap. IHG points are easy to earn and buy on sale.",
+      "cost_range": "5,000-15,000 points/night",
+      "why": "Low-category IHG hotels are cheap on points, and IHG points are easy to earn and buy on sale. NOTE: the famous PointBreaks promotion (5,000-point nights at select hotels) has been discontinued since early 2020 and has not returned — only occasional smaller flash sales on award stays remain.",
       "transfer_partners": ["Chase UR (1:1)", "Bilt (1:1)"],
       "booking": {
         "search_at": "ihg.com",
