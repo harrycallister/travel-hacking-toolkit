@@ -4,6 +4,10 @@
 .env.bak
 .claude/settings.local.json
 
+# Personal overlay (preferences, status, wallet/earn data)
+CLAUDE.local.md
+*.local.json
+
 # Dependencies
 node_modules/
 
