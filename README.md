@@ -217,6 +217,7 @@ Also use **tripadvisor** (under Destinations) for hotel ratings, rankings, subra
 | **american-airlines** | AAdvantage balance and elite status. AwardWallet does not support AA. Docker: `ghcr.io/borski/aa-miles-check`. | None (requires Patchright) |
 | **awardwallet** | All loyalty balances, elite status, history. | AwardWallet Business |
 | **best-card-for-spend** | Wallet-based card ranking for cash spend. Value-first (cents back per dollar) using points-valuations floors. Merchant→category classification, caps, and how to refresh earn rates via awardtravelfinder MCP. | None |
+| **card-strategy** | Card acquisition thinking partner. Welcome-bonus ROI math, issuer gating rules (5/24, once-per-lifetime, 48-month), fee breakeven on honestly-used credits, keep/downgrade/cancel tree, 2-player sequencing. | None |
 | **transfer-partners** | Cheapest transfer path from credit card points to mileage programs. | None (local data) |
 | **wheretocredit** | Mileage earning rates by airline and booking class across 50+ programs. | None (free) |
 <!-- END: readme:loyalty -->

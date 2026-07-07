@@ -84,6 +84,64 @@ The card swipe is only the base layer. For **online** purchases a shopping porta
 ### Card-linked offers (Amex/Chase/Cap One Offers)
 Always a free check before any sizeable purchase: log in, add the offer to the card, then buy with that card. These stack on everything else and are pure upside. The `--promos` list links each issuer's offers page.
 
+## The creative accumulation playbook
+
+Beyond the standard stack, these levers are how heavy hitters outrun the published
+earn rates. Each is a live check, never a stored number. For any sizeable purchase,
+scan the list and mention the ones that apply — proactively, not on request.
+
+**The canonical stacking order for one purchase** (every layer is independent —
+missing one never blocks the others):
+1. Card-linked offer (add before buying)
+2. Shopping portal click-through — compare CASH portals AND MILE portals (below)
+3. Merchant/brand loyalty account + any registered promo
+4. Swipe the winning card from the script
+5. Post-purchase: receipt-scan offers where relevant (e.g. AA SimplyMiles-style
+   card-linked mile offers — check what's currently live)
+
+**Airline & hotel shopping portals pay MILES, not cash.** AAdvantage eShopping,
+United MileagePlus Shopping, Delta SkyMiles Shopping, Alaska Mileage Plan Shopping,
+and hotel equivalents run the same merchant networks as Rakuten. Compare by VALUE:
+3 mi/$ into Delta (~1.2cpp) = 3.6¢ vs 2% cash = 2¢. cashbackmonitor.com compares
+cash and mile portals side by side — always check both columns. Mile portals are
+also a status play: they're often the cheapest way to top off an account before a
+redemption (500 miles short? One portal purchase beats buying miles).
+
+**Airline dining programs stack invisibly.** Rewards Network runs AAdvantage
+Dining / MileagePlus Dining / SkyMiles Dining etc.: register the SAME cards you
+swipe anyway, and enrolled restaurants pay ~1-5 mi/$ ON TOP of the card's dining
+multiplier. One-time setup, zero marginal effort. A card can only be enrolled in
+ONE program at a time — enroll the household's cards in the program whose miles
+they value most (check `points-valuations`).
+
+**Buy-points sales: only against a priced redemption.** Buying miles speculatively
+is almost always negative-EV. The rule: a purchase is justified only when (a) a
+specific award is bookable RIGHT NOW, (b) purchase price per mile < that award's
+cpp, and (c) you're topping off, not funding the whole award. Check current sales
+before dismissing — 100% bonus sales (Alaska, Avianca, Hilton) can price miles
+below 1.3¢ when the planned burn is 2¢+.
+
+**Two-player referrals.** Before either player applies for anything, check whether
+the other holds the card — a referral adds 10-30K points to the household for the
+same application. Also route big purchases to whichever player's card is inside a
+welcome-bonus min-spend window (see `card-strategy`).
+
+**Gift cards move spend into bonused categories.** Buying a merchant gift card at
+a grocery store moves that future spend from 1-2x into the grocery multiplier
+(and grocery-portal promos stack). Legit and common, with three caveats to state
+every time: category caps still apply, some issuers exclude GC purchases from
+offers/bonuses (check terms), and large/frequent GC volume can trigger issuer
+shutdowns — keep it to planned spend, not manufactured volume.
+
+**Big one-off payments can buy a bonus.** Federal taxes are payable by card for
+~1.8% fee — negative against normal earning, positive when it unlocks a welcome
+bonus worth 10-20%+ of spend, or when the card earns >1.8¢/$ in value. Same logic
+for insurance/tuition processors. Run the fee vs. value math explicitly.
+
+**Rent/mortgage via Bilt** earns on the household's biggest expense if the user
+ever adds Bilt — currently they don't hold it; mention only if their housing
+situation makes the fee-free earn meaningful (see `card-strategy` for whether to add it).
+
 ## Edge cases the script handles
 
 - A category a card doesn't bonus falls back to its `other` (base) rate, labeled `(base)`.

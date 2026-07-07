@@ -56,7 +56,7 @@ This toolkit ships skills (in `skills/`) and MCP servers. Skill names and descri
 
 **Hotels:** `premium-hotels`, `compare-hotels`, `hotel-chains`, `ticketsatwork`
 
-**Loyalty / points:** `awardwallet`, `transfer-partners`, `trip-calculator`, `points-valuations`, `partner-awards`, `alliances`, `award-sweet-spots`, `cabin-codes`, `american-airlines`, `wheretocredit`, `transfer-bonuses`, `status-match`
+**Loyalty / points:** `awardwallet`, `transfer-partners`, `trip-calculator`, `points-valuations`, `partner-awards`, `alliances`, `award-sweet-spots`, `cabin-codes`, `american-airlines`, `wheretocredit`, `transfer-bonuses`, `status-match`, `best-card-for-spend`, `card-strategy`
 
 **Portals:** `chase-travel`, `amex-travel`, `bilt`
 
@@ -140,6 +140,16 @@ Load the `points-valuations` skill. It covers cpp formula, surcharge-heavy progr
 2. **Useful pre-search check.** Before asking the user "did you mean a different airport?" verify their requested route is actually flown by checking Wikipedia. Saves a round-trip when the answer is "this carrier doesn't fly there."
 3. **Late-split-return discovery.** If standard fare search misses a workable late-night option, scan the destination's Wikipedia page for less-common airlines (regional, ULCC) that might serve a return leg from a nearby airport.
 
+### When someone is about to PAY for something (earn side):
+1. **Load `best-card-for-spend` and run `scripts/best-card.py`** for the category. Rank by multiplier × cpp, never raw multiplier.
+2. **Run the full stack, not just the swipe:** card-linked offers, shopping portals (compare cash portals AND airline/hotel mile portals by value), dining-program overlap, chain/airline promos needing registration. The skill's "creative accumulation playbook" is the checklist — scan it proactively on any sizeable purchase.
+3. **Verify live, per the earn hook's mandate.** Stored rates are a cache; portal rates are per-merchant and daily.
+
+### When someone asks about getting, keeping, or canceling a card:
+1. **Load the `card-strategy` skill** and run its acquisition sequence: redemption goal first, issuer gating rules (5/24, once-per-lifetime, 48-month), live bonus check, honest ROI math, 2-player sequencing, exit plan.
+2. **Reconcile against what they hold** (`data/my-cards.local.json`, CLAUDE.local.md, memory earmarks). Never recommend an application that duplicates a currency they're rich in without saying why.
+3. **Before any cancel recommendation, check whether it's the last card keeping a currency alive** — cancelling it forfeits the points.
+
 ### When someone asks about elite status or status match:
 1. **Load the `status-match` skill.** It covers free direct matches, paid concierge via statusmatch.com, and renewable card-based status.
 2. **Always state the lifetime restriction first.** Alaska Atmos = once per lifetime (verified primary). United/Delta = once every 3 years (verified primary). AA = once every 2 years (verified primary). Hyatt Globalist / Marriott Platinum / Hilton Diamond Challenges = LIKELY once per lifetime (community-confirmed but not always in published terms).
@@ -164,6 +174,8 @@ If a key needed for the current task shows `unset`:
 If a curl command returns HTML instead of JSON, or you get auth errors, the env vars aren't loaded. Tell the user how to load them, then retry.
 
 ## After Modifying the Toolkit
+
+**Read `docs/DEVELOPMENT.md` before changing skills, data, scripts, or this file.** It documents the architecture (what's generated vs. hand-written, the CLAUDE.md→agent mirror, the skills symlink), the data freshness conventions, and the fix-at-every-layer reasoning pattern for bugs.
 
 If you change skills, CLAUDE.md, or MCP config, run `bash scripts/smoke-test.sh` from the repo root. It checks setup script syntax, skill frontmatter, CLAUDE.md size, and verifies each of codex, claude, and opencode start cleanly and pick the right skills for a real travel question. Use `--quick` for static checks only when iterating fast, full test before pushing.
 

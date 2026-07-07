@@ -60,6 +60,7 @@ Skill listings below are auto-generated from `skills/*/SKILL.md` frontmatter by 
 - [American Airlines](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/american-airlines/SKILL.md): AAdvantage balance and elite status. AwardWallet does not support AA. Docker: `ghcr.io/borski/aa-miles-check`.
 - [Awardwallet](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/awardwallet/SKILL.md): All loyalty balances, elite status, history.
 - [Best Card For Spend](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/best-card-for-spend/SKILL.md): Wallet-based card ranking for cash spend. Value-first (cents back per dollar) using points-valuations floors. Merchant→category classification, caps, and how to refresh earn rates via awardtravelfinder MCP.
+- [Card Strategy](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/card-strategy/SKILL.md): Card acquisition thinking partner. Welcome-bonus ROI math, issuer gating rules (5/24, once-per-lifetime, 48-month), fee breakeven on honestly-used credits, keep/downgrade/cancel tree, 2-player sequencing.
 - [Transfer Partners](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/transfer-partners/SKILL.md): Cheapest transfer path from credit card points to mileage programs.
 - [Wheretocredit](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/wheretocredit/SKILL.md): Mileage earning rates by airline and booking class across 50+ programs.
 <!-- END: llms:loyalty -->
