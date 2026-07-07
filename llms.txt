@@ -47,6 +47,7 @@ Skill listings below are auto-generated from `skills/*/SKILL.md` frontmatter by 
 ## Hotels and Accommodation
 
 <!-- BEGIN: llms:hotels -->
+- [Gondola](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/gondola/SKILL.md): Cash + points hotel rates via Gondola (direct-HTTP fallback for the 406 bug).
 - [Premium Hotels](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/premium-hotels/SKILL.md): Search 4,659 Amex FHR/THC + Chase Edit hotels by city. Stacking opportunities.
 - [Rapidapi](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/rapidapi/SKILL.md): Booking.com hotel prices.
 - [Serpapi](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/serpapi/SKILL.md): Google Hotels search and destination discovery.
@@ -58,6 +59,7 @@ Skill listings below are auto-generated from `skills/*/SKILL.md` frontmatter by 
 <!-- BEGIN: llms:loyalty -->
 - [American Airlines](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/american-airlines/SKILL.md): AAdvantage balance and elite status. AwardWallet does not support AA. Docker: `ghcr.io/borski/aa-miles-check`.
 - [Awardwallet](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/awardwallet/SKILL.md): All loyalty balances, elite status, history.
+- [Best Card For Spend](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/best-card-for-spend/SKILL.md): Wallet-based card ranking for cash spend. Value-first (cents back per dollar) using points-valuations floors. Merchant→category classification, caps, and how to refresh earn rates via awardtravelfinder MCP.
 - [Transfer Partners](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/transfer-partners/SKILL.md): Cheapest transfer path from credit card points to mileage programs.
 - [Wheretocredit](https://github.com/borski/travel-hacking-toolkit/blob/main/skills/wheretocredit/SKILL.md): Mileage earning rates by airline and booking class across 50+ programs.
 <!-- END: llms:loyalty -->
