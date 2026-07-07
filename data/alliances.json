@@ -1,9 +1,9 @@
 {
   "_meta": {
     "description": "Airline alliance membership and loyalty programs. Used for determining which programs can book which airlines.",
-    "last_updated": "2026-03-31",
+    "last_updated": "2026-07-07",
     "staleness_days": 90,
-    "notes": "ITA Airways left SkyTeam (Feb-Apr 2025), expected to join Star Alliance first half 2026. SAS moved from Star Alliance to SkyTeam Sep 1, 2024. Fiji Airways upgraded to full oneworld member 2025. Oman Air joined oneworld Jun 30, 2025. Hawaiian Airlines joining oneworld Apr 22, 2026 (6 days away)."
+    "notes": "ITA Airways joined Star Alliance 2026-04-01 (left SkyTeam Feb-Apr 2025; uses Miles & More since Volare ended 2026-03-30). Hawaiian Airlines joined oneworld April 2026 (Atmos Rewards, shared with Alaska). Asiana exits Star Alliance 2026-12-16 ahead of the Korean Air merger. SAS moved Star->SkyTeam Sep 1, 2024. Fiji Airways full oneworld member 2025. Oman Air joined oneworld Jun 30, 2025."
   },
 
   "star_alliance": {
@@ -15,7 +15,7 @@
       {"airline": "Air India", "iata": "AI", "country": "India", "loyalty_program": "Flying Returns", "hubs": ["DEL", "BOM"]},
       {"airline": "Air New Zealand", "iata": "NZ", "country": "New Zealand", "loyalty_program": "Airpoints", "hubs": ["AKL"]},
       {"airline": "ANA (All Nippon Airways)", "iata": "NH", "country": "Japan", "loyalty_program": "ANA Mileage Club", "hubs": ["NRT", "HND"]},
-      {"airline": "Asiana Airlines", "iata": "OZ", "country": "South Korea", "loyalty_program": "Asiana Club", "hubs": ["ICN"]},
+      {"airline": "Asiana Airlines", "iata": "OZ", "country": "South Korea", "loyalty_program": "Asiana Club", "hubs": ["ICN"], "departing": "2026-12-16", "note": "Exits Star Alliance 2026-12-16; merges into Korean Air (SkyTeam) 2026-12-17. Don't recommend Asiana Club for redemptions past that date."},
       {"airline": "Austrian Airlines", "iata": "OS", "country": "Austria", "loyalty_program": "Miles & More", "hubs": ["VIE"], "parent_group": "Lufthansa Group"},
       {"airline": "Avianca", "iata": "AV", "country": "Colombia", "loyalty_program": "LifeMiles", "hubs": ["BOG"]},
       {"airline": "Brussels Airlines", "iata": "SN", "country": "Belgium", "loyalty_program": "Miles & More", "hubs": ["BRU"], "parent_group": "Lufthansa Group"},
@@ -33,11 +33,10 @@
       {"airline": "TAP Air Portugal", "iata": "TP", "country": "Portugal", "loyalty_program": "Miles&Go", "hubs": ["LIS"]},
       {"airline": "Thai Airways", "iata": "TG", "country": "Thailand", "loyalty_program": "Royal Orchid Plus", "hubs": ["BKK"], "founding_member": true},
       {"airline": "Turkish Airlines", "iata": "TK", "country": "Turkey", "loyalty_program": "Miles&Smiles", "hubs": ["IST"]},
-      {"airline": "United Airlines", "iata": "UA", "country": "USA", "loyalty_program": "MileagePlus", "hubs": ["EWR", "IAH", "ORD", "SFO", "IAD", "DEN", "LAX"], "founding_member": true}
+      {"airline": "United Airlines", "iata": "UA", "country": "USA", "loyalty_program": "MileagePlus", "hubs": ["EWR", "IAH", "ORD", "SFO", "IAD", "DEN", "LAX"], "founding_member": true},
+      {"airline": "ITA Airways", "iata": "AZ", "country": "Italy", "loyalty_program": "Miles & More", "hubs": ["FCO", "MXP"], "parent_group": "Lufthansa Group", "note": "Joined Star Alliance 2026-04-01 (left SkyTeam Feb-Apr 2025). Volare program ended 2026-03-30; now uses Lufthansa Miles & More."}
     ],
-    "pending_members": [
-      {"airline": "ITA Airways", "iata": "AZ", "country": "Italy", "loyalty_program": "Volare", "hubs": ["FCO", "MXP"], "expected_join": "first half 2026", "parent_group": "Lufthansa Group", "note": "Left SkyTeam Feb-Apr 2025. Integration into Star Alliance underway."}
-    ],
+    "pending_members": [],
     "connecting_partners": [
       {"airline": "Juneyao Air", "iata": "HO", "country": "China"}
     ]
@@ -60,11 +59,10 @@
       {"airline": "Royal Air Maroc", "iata": "AT", "country": "Morocco", "loyalty_program": "Safar Flyer", "hubs": ["CMN"]},
       {"airline": "Royal Jordanian", "iata": "RJ", "country": "Jordan", "loyalty_program": "Royal Club", "hubs": ["AMM"]},
       {"airline": "SriLankan Airlines", "iata": "UL", "country": "Sri Lanka", "loyalty_program": "FlySmiLes", "hubs": ["CMB"]},
-      {"airline": "Oman Air", "iata": "WY", "country": "Oman", "loyalty_program": "Sindbad", "hubs": ["MCT"], "note": "Joined Jun 30, 2025"}
+      {"airline": "Oman Air", "iata": "WY", "country": "Oman", "loyalty_program": "Sindbad", "hubs": ["MCT"], "note": "Joined Jun 30, 2025"},
+      {"airline": "Hawaiian Airlines", "iata": "HA", "country": "USA", "loyalty_program": "Atmos Rewards (shared with Alaska)", "hubs": ["HNL"], "note": "Joined April 2026. Part of Alaska Air Group; HawaiianMiles converted 1:1 into Atmos Rewards."}
     ],
-    "pending_members": [
-      {"airline": "Hawaiian Airlines", "iata": "HA", "country": "USA", "loyalty_program": "Atmos Rewards (via Alaska)", "hubs": ["HNL"], "expected_join": "2026-04-22", "note": "Part of Alaska Air Group. Will share Atmos Rewards program. Joining in 6 days."}
-    ],
+    "pending_members": [],
     "potential_members": [
       {"airline": "Starlux Airlines", "iata": "JX", "country": "Taiwan", "note": "Has expressed interest, acceptance not confirmed"}
     ]

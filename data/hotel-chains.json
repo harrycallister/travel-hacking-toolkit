@@ -1,9 +1,9 @@
 {
   "_meta": {
     "description": "Major hotel chain families, their sub-brands, loyalty programs, and transfer partners. Use to identify which loyalty program a hotel belongs to when it appears in search results.",
-    "last_updated": "2026-03-21",
+    "last_updated": "2026-07-07",
     "staleness_days": 90,
-    "notes": "Choice acquired Radisson Hotels Americas. Hilton added Diamond Reserve tier (Jan 2026). Hyatt acquired Mr & Mrs Smith platform. Brand portfolios change frequently via acquisitions."
+    "notes": "Verified 2026-07-07: all 8 chain->program mappings unchanged; added ruby->ihg reverse lookup. Hyatt moved to 5-tier award pricing effective 2026-05-07. Choice acquired Radisson Hotels Americas. Hilton added Diamond Reserve tier (Jan 2026). Hyatt acquired Mr & Mrs Smith platform. Brand portfolios change frequently via acquisitions."
   },
 
   "chains": {
@@ -194,6 +194,7 @@
     "even hotels": "ihg",
     "avid hotels": "ihg",
     "garner": "ihg",
+    "ruby": "ihg",
     "park hyatt": "hyatt",
     "grand hyatt": "hyatt",
     "hyatt regency": "hyatt",

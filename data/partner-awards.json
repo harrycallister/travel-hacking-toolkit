@@ -1,9 +1,9 @@
 {
   "_meta": {
     "description": "Which loyalty programs can book which airlines for award flights. Covers alliance-based, bilateral, and cross-alliance partnerships. Use this to determine if a user can actually redeem miles on a specific airline.",
-    "last_updated": "2026-03-31",
+    "last_updated": "2026-07-07",
     "staleness_days": 90,
-    "notes": "AUDITED 2026-03-31: Fixed VA SkyTeam list (was 4 airlines, now 18), VA online_booking (was false), Iberia/Qatar/Korean Air incomplete alliance lists, Oman Air added to all oneworld programs, TAROM deduped from Flying Blue, Aeroplan Citi TY removed (no direct transfer). Partner availability changes. Always verify on the booking program's website before committing."
+    "notes": "UPDATED 2026-07-07: ITA Airways added to Star Alliance bookable lists (joined 2026-04-01). Asiana remains bookable via Star programs until 2026-12-16 exit. AUDITED 2026-03-31: Fixed VA SkyTeam list (was 4 airlines, now 18), VA online_booking (was false), Iberia/Qatar/Korean Air incomplete alliance lists, Oman Air added to all oneworld programs, TAROM deduped from Flying Blue, Aeroplan Citi TY removed (no direct transfer). Partner availability changes. Always verify on the booking program's website before committing."
   },
 
   "programs": {
@@ -11,7 +11,7 @@
       "display_name": "United MileagePlus",
       "alliance": "star_alliance",
       "bookable_airlines": {
-        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "Croatia Airlines", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Shenzhen Airlines", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United"],
+        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "Croatia Airlines", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Shenzhen Airlines", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United", "ITA Airways"],
         "non_alliance": ["Emirates (limited, EWR-DXB only)"]
       },
       "transfer_from": ["Chase UR (1:1)", "Bilt (1:1)"],
@@ -26,7 +26,7 @@
       "display_name": "Air Canada Aeroplan",
       "alliance": "star_alliance",
       "bookable_airlines": {
-        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "Croatia Airlines", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Shenzhen Airlines", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United"],
+        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "Croatia Airlines", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Shenzhen Airlines", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United", "ITA Airways"],
         "non_alliance": ["Azul", "Etihad (select routes)", "Juneyao Airlines", "Vistara"]
       },
       "transfer_from": ["Amex MR (1:1)", "Bilt (1:1)", "Capital One (1:1)", "Chase UR (1:1)"],
@@ -58,7 +58,7 @@
       "display_name": "Avianca LifeMiles",
       "alliance": "star_alliance",
       "bookable_airlines": {
-        "star_alliance": ["ANA", "Air Canada", "Air China", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United"],
+        "star_alliance": ["ANA", "Air Canada", "Air China", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United", "ITA Airways"],
         "non_alliance": []
       },
       "transfer_from": ["Amex MR (1:1)", "Bilt (1:1)", "Capital One (1:1)", "Citi TY (1:1)"],
@@ -73,7 +73,7 @@
       "display_name": "Turkish Airlines Miles&Smiles",
       "alliance": "star_alliance",
       "bookable_airlines": {
-        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United"],
+        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "Singapore Airlines", "South African Airways", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United", "ITA Airways"],
         "non_alliance": []
       },
       "transfer_from": ["Bilt (1:1)", "Capital One (1:1)", "Citi TY (1:1)"],
@@ -251,7 +251,7 @@
       "display_name": "Singapore Airlines KrisFlyer",
       "alliance": "star_alliance",
       "bookable_airlines": {
-        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United", "Singapore Airlines"],
+        "star_alliance": ["ANA", "Air Canada", "Air China", "Air India", "Air New Zealand", "Asiana", "Austrian", "Avianca", "Brussels Airlines", "Copa", "EgyptAir", "Ethiopian", "EVA Air", "LOT Polish", "Lufthansa", "SWISS", "TAP Portugal", "Thai Airways", "Turkish Airlines", "United", "ITA Airways", "Singapore Airlines"],
         "non_alliance": ["Virgin Australia"]
       },
       "transfer_from": ["Amex MR (1:1)", "Capital One (1:1)", "Chase UR (1:1)", "Citi TY (1:1)"],

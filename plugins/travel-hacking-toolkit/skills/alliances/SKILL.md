@@ -26,9 +26,10 @@ Star Alliance, oneworld, and SkyTeam determine which loyalty programs can book w
 Verify against `data/alliances.json` for current state. These have shifted recently:
 
 - SAS moved from Star Alliance to SkyTeam (September 2024)
-- ITA Airways left SkyTeam (early 2025), joining Star Alliance (first half 2026)
+- ITA Airways joined Star Alliance April 1, 2026 (left SkyTeam early 2025; its Volare program ended — ITA now uses Lufthansa Miles & More)
 - Fiji Airways upgraded to full oneworld member (2025)
-- Hawaiian Airlines joining oneworld (April 2026)
+- Hawaiian Airlines joined oneworld April 2026 (loyalty = Atmos Rewards, shared with Alaska)
+- Asiana exits Star Alliance December 16, 2026, then folds into Korean Air (SkyTeam). Don't book Asiana Club redemptions with travel past that date without checking current guidance.
 
 ## Cross-Alliance Bookings Are Where Real Value Hides
 
@@ -37,7 +38,7 @@ The best redemptions often involve booking an airline through a program in a DIF
 Examples of cross-alliance plays:
 - Virgin Atlantic Flying Club books ANA First Class (legendary sweet spot)
 - Etihad Guest books AAdvantage routes
-- Alaska Mileage Plan books Starlux (independent airline)
+- Alaska Atmos Rewards (formerly Mileage Plan) books Starlux (independent airline)
 
 ## Partner Awards Reference
 
