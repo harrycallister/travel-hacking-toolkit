@@ -197,6 +197,69 @@ PY
     sed 's/^/      /' /tmp/gendrift.out | head -30
   fi
 
+  # 7b. All Python scripts compile
+  if python3 -m py_compile scripts/*.py 2>/tmp/pycompile.err; then
+    ok "all scripts/*.py compile"
+  else
+    fail "python script compile error"
+    sed 's/^/      /' /tmp/pycompile.err | head -5
+  fi
+
+  # 7c. All shell scripts parse
+  sh_ok=1
+  for s in scripts/*.sh; do
+    bash -n "$s" 2>/dev/null || { sh_ok=0; fail "syntax error: $s"; }
+  done
+  [ "$sh_ok" -eq 1 ] && ok "all scripts/*.sh parse"
+
+  # 7d. All data/*.json are valid JSON
+  if python3 - <<'PYEOF' 2>/dev/null
+import glob, json, sys
+for f in glob.glob("data/*.json"):
+    json.load(open(f))
+PYEOF
+  then
+    ok "all data/*.json valid JSON"
+  else
+    fail "invalid JSON in data/ (run: python3 -m json.tool on each file)"
+  fi
+
+  # 7e. No expired bonus listed as active in transfer-bonuses.json.
+  # Regression guard for 2026-07-07, when 5 bonuses that ended a week earlier
+  # were still in active_bonuses and would have produced wrong transfer advice.
+  if python3 - <<'PYEOF'
+import datetime, json, sys
+d = json.load(open("data/transfer-bonuses.json"))
+today = datetime.date.today().isoformat()
+bad = [b["id"] for b in d.get("active_bonuses", [])
+       if b.get("end_date_inclusive") and b["end_date_inclusive"] < today]
+if bad:
+    print("      expired-but-active:", ", ".join(bad))
+    sys.exit(1)
+PYEOF
+  then
+    ok "no expired transfer bonuses listed as active"
+  else
+    fail "expired bonuses in active_bonuses (run: python3 scripts/refresh-transfer-bonuses.py)"
+  fi
+
+  # 7f. best-card.py CLI works without personal wallet data
+  if python3 scripts/best-card.py --list-categories >/dev/null 2>&1; then
+    ok "best-card.py --list-categories runs"
+  else
+    fail "best-card.py --list-categories failed"
+  fi
+
+  # 7g. earn-verify-hook fires on earn prompts, stays silent otherwise, never errors
+  hook_out=$(echo '{"prompt":"which card should I use for groceries?"}' | python3 scripts/earn-verify-hook.py 2>/dev/null)
+  hook_quiet=$(echo '{"prompt":"what is the weather in Oslo?"}' | python3 scripts/earn-verify-hook.py 2>/dev/null)
+  hook_garbage_rc=0; echo 'not json' | python3 scripts/earn-verify-hook.py >/dev/null 2>&1 || hook_garbage_rc=$?
+  if [ -n "$hook_out" ] && [ -z "$hook_quiet" ] && [ "$hook_garbage_rc" -eq 0 ]; then
+    ok "earn-verify-hook triggers/silences/degrades correctly"
+  else
+    fail "earn-verify-hook behavior wrong (triggered=$([ -n "$hook_out" ] && echo y || echo n) quiet=$([ -z "$hook_quiet" ] && echo y || echo n) garbage_rc=$hook_garbage_rc)"
+  fi
+
   # 8. Claude plugin manifest + marketplace validate
   if [ -f .claude-plugin/plugin.json ] && [ -f .claude-plugin/marketplace.json ]; then
     if command -v claude >/dev/null 2>&1; then
